@@ -25,7 +25,7 @@ body {
 
 .prodects {
   display: flex;
-  /* justify-content: space-between; */
+  /* justify-content: center; */
   padding: 3rem;
   gap: 2.8rem;
   flex-wrap: wrap;

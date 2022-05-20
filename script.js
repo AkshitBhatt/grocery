@@ -2,20 +2,14 @@ let mainDiv = document.querySelector(".prodects");
 let prods = [];
 
 function refreshScreen() {
-  //   mainDiv.innerHTML = prods.join("");
-  let c = "";
-  for (let i of prods) {
-    c = c + i;
-  }
-  mainDiv.innerHTML = c;
-
+  mainDiv.innerHTML = prods.join("");
   document.querySelector(".counter").innerHTML = prods.length;
 }
 
 const add = `
     
 <div class="prodects-1">
-<p class="off">10% OFF</p>
+<p class="off" >10% OFF</p>
 
 <img
   src="/images/apple_PNG12405.png"
@@ -42,11 +36,12 @@ const add = `
 
 document.querySelector(".add").addEventListener("click", () => {
   prods.push(add);
-
   refreshScreen();
 });
 
 document.querySelector(".sub").addEventListener("click", () => {
-  prods.pop();
+  if (prods.length > 1) {
+    prods.pop();
+  }
   refreshScreen();
 });
